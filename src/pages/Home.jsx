@@ -1,5 +1,8 @@
 import "../styles/Home.css";
 
+//Description:The welcoming gateway to your portfolio featuring a modern hero section with your mission statement. 
+//Highlights your core competencies as a developer with clear call to action buttons linking to key sections.
+//Designed with animated gradients and smooth transitions to showcase your front end skills.
 function Home() {
   return (
     <div className="home-container">
@@ -13,16 +16,18 @@ function Home() {
           </div>
         </div>
         <div className="hero-image">
-          <img 
-            src="/images/hero-image.jpg"  // You can use any professional image
+          <img //image for home
+            src="/images/hero-image.jpg"  
             alt="Creative workspace"
             className="profile-hero-image"
           />
+          
         </div>
+        
       </header>
 
       <section className="mission-section">
-        <h2>My Mission</h2>
+        <h2>Mission Statement</h2>
         <div className="mission-card">
           <p>
             To design and develop intuitive, accessible web applications that solve real problems 

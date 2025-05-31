@@ -1,10 +1,14 @@
 import '../styles/About.css';
-
+//Description:Professional profile featuring your academic background (Centennial College),
+//technical skills, and career aspirations. Includes a headshot image and downloadable resume link 
+//formatted for recruiter scanning with clean typography and organized sections.
 function About() {
   return (
+    // Main container
     <div className="about-container">
       <div className="about-content">
         <h1>About Me</h1>
+         {/* Profile section containing image and text information */}
         <div className="profile-section">
           <img 
             src="/images/profile.jpg" 
@@ -26,7 +30,7 @@ function About() {
               download
               className="resume-link"
             >
-              D
+              Download My Resume
             </a>
           </div>
         </div>

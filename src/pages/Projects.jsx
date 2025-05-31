@@ -1,4 +1,4 @@
-
+//Three technical projects demonstrating full stack capabilities. 
 
 
 import '../styles/Projects.css';

@@ -1,5 +1,6 @@
 import '../styles/Services.css';
-
+//Description:Professional offerings matrix highlighting four service areas with visual icons. 
+//designed to quickly communicate your technical specialties to potential clients/employers.
 function Services() {
   const services = [
     {
