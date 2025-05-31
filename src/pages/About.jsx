@@ -19,13 +19,14 @@ function About() {
               Currently pursuing my degree in Computer Science, I enjoy solving complex problems and 
               creating user friendly applications. My technical skills include React, Node.js, Java 
               and database management.
+
             </p>
             <a 
               href="/resume.pdf" 
               download
               className="resume-link"
             >
-              Download My Resume
+              D
             </a>
           </div>
         </div>
