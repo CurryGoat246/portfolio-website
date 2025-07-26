@@ -1,6 +1,11 @@
+import { Link } from 'react-router-dom';
+import { useContext } from 'react';
+import { AuthContext } from '../context/AuthContext';
 import '../styles/Navbar.css';
 
 function Navbar() {
+  const { user, logout } = useContext(AuthContext);
+
   return (
     <nav className="navbar">
       <div className="logo-container">
@@ -8,11 +13,33 @@ function Navbar() {
         <span className="logo-text">Gavin Beresford</span>
       </div>
       <ul className="nav-links">
-        <li><a href="/">Home</a></li>
-        <li><a href="/about">About</a></li>
-        <li><a href="/projects">Projects</a></li>
-        <li><a href="/services">Services</a></li>
-        <li><a href="/contact">Contact</a></li>
+        <li><Link to="/">Home</Link></li>
+        <li><Link to="/about">About</Link></li>
+        <li><Link to="/projects">Projects</Link></li>
+        <li><Link to="/services">Services</Link></li>
+        <li><Link to="/contact">Contact</Link></li>
+
+        {user?.role === 'admin' && (
+          <>
+            <li><Link to="/admin/projects">Manage Projects</Link></li>
+            <li><Link to="/admin/qualifications">Manage Qualifications</Link></li>
+            <li><Link to="/admin/contacts">Manage Contacts</Link></li>
+          </>
+        )}
+
+        {user ? (
+          <>
+            <li><Link to="/profile">Profile</Link></li>
+            <li>
+              <button onClick={logout} className="nav-button">Logout</button>
+            </li>
+          </>
+        ) : (
+          <>
+            <li><Link to="/login" className="nav-login">Login</Link></li>
+            <li><Link to="/signup" className="nav-signup">Sign Up</Link></li>
+          </>
+        )}
       </ul>
     </nav>
   );
