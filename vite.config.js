@@ -5,17 +5,22 @@ export default defineConfig({
   plugins: [react()],
   server: {
     proxy: {
-      // Proxy API requests to your Express backend
       '/api': {
         target: 'http://localhost:3000',
         changeOrigin: true,
-        secure: false
+        secure: false,
       },
       '/auth': {
         target: 'http://localhost:3000',
         changeOrigin: true,
-        secure: false
-      }
-    }
-  }
+        secure: false,
+      },
+    },
+  },
+  test: {
+    globals: true,
+    environment: 'jsdom',
+    setupFiles: './src/tests/setup.js',
+    include: ['src/**/*.test.{js,jsx}'], 
+  },
 });
